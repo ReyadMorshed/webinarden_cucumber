@@ -20,7 +20,7 @@ public class bracCreateStakeHolderTest extends Base {
 	@Given("User is in Brac website")
 	public void user_is_in_brac_website() {
 		
-		navigateToApplication(Hook.configProperties.getProperty("URL"));
+		navigateToApplication(Hook.configProperties.getProperty("URL1"));
 	    
 	}
 
@@ -35,8 +35,8 @@ public class bracCreateStakeHolderTest extends Base {
 	@When("User is in Brac Sign In page, enter username and password for login")
 	public void user_is_in_brac_sign_in_page_enter_username_and_password_for_login() throws InterruptedException {
 	   
-		String usename = Hook.configProperties.getProperty("username");
-		String password = Hook.configProperties.getProperty("password");
+		String usename = Hook.configProperties.getProperty("username1");
+		String password = Hook.configProperties.getProperty("password1");
 		homePage = adminActions.userEnterEmailAndPasswordForLogin(loginPage, usename, password);
 	}
 
@@ -77,7 +77,7 @@ public class bracCreateStakeHolderTest extends Base {
 
 	@Then("validate that the stakeholder is successfully created")
 	public void validate_that_the_stakeholder_is_successfully_created() {
-		String name = Hook.configProperties.getProperty("name");
+		String name = Hook.configProperties.getProperty("name1");
 		adminActions.adminCanSearchStakeholder(informationPage, name);
 	}
 
